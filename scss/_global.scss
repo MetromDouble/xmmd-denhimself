@@ -1,0 +1,19 @@
+body {
+  @include body-font;
+  font-weight: 100;
+  font-size: 16px;
+
+  @media screen and (max-width: $m) {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include body-font;
+  font-weight: 700;
+}

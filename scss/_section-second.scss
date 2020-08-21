@@ -1,0 +1,183 @@
+.section-second {
+  color: $max-light;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 4rem 1rem;
+  background-color: $gray-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  & > * {
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg-2.png') no-repeat center center;
+    @include background-cover;
+    z-index: 0;
+  }
+
+  @media screen and (max-width: $m) {
+    padding: 2rem 1rem;
+  }
+
+  .about {
+    width: 960px;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-bottom: 4rem;
+
+    &-pic {
+      background: $min-light;
+      width: 18rem;
+      height: 28rem;
+      flex-shrink: 0;
+      @include background-cover;
+      background: url('../img/den.jpg') no-repeat top center;
+      background-size: 100% 100%;
+
+      @media screen and (max-width: $m) {
+        display: none;
+      }
+    }
+
+    &-header {
+      font-size: 2.4rem;
+      @include body-font;
+      font-weight: 300;
+      margin-top: .5rem;
+      margin-bottom: 1.5rem;
+
+      @media screen and (max-width: $xl) {
+        font-size: 2rem;
+      }
+    }
+
+    &-text {
+      background-color: rgba(0,0,0,.3);
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.12rem;
+
+      @media screen and (max-width: $xl) {
+        font-size: 1rem;
+      }
+    }
+
+    @media screen and (max-width: $xl) {
+      width: 720px;
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: $m) {
+      width: 100%;
+    }
+  }
+
+  .tricks {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $xl) {
+      width: 720px;
+    }
+
+    @media screen and (max-width: $m) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .trick {
+    width: 18rem;
+    height: 18rem;
+    background-color: $gray-3;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: $min-light;
+
+    &-header {
+      @include body-font;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: $gray-1;
+
+      @media screen and (max-width: $xl) {
+        margin-top: .6rem;
+        margin-bottom: 0;
+        font-size: 1.28rem;
+      }
+    }
+
+    &-text {
+      @include body-font;
+      font-weight: 500;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      text-align: center;
+      color: $gray-2;
+
+      @media screen and (max-width: $xl) {
+        font-size: .8rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+      }
+    }
+
+    @media screen and (max-width: $xl) {
+      width: 14rem;
+      height: 14rem;
+    }
+
+    @media screen and (max-width: $m) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  .icon {
+    display: block;
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    @include background-cover;
+
+    @media screen and (max-width: $m) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  .icon-leader {
+    background: url('../img/leader.svg') no-repeat center center;
+  }
+  .icon-values {
+    background: url('../img/values.svg') no-repeat center center;
+  }
+  .icon-state {
+    background: url('../img/state.svg') no-repeat center center;
+  }
+
+}

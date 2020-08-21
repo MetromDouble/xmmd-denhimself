@@ -24,33 +24,81 @@
 </head>
 
 <body>
+  <button id="nav-open-btn" class="menu-btn"></button>
 
   <!-- Navigation -->
-  <nav class="navigation">
+  <nav id="nav" class="navigation">
+    <button class="nav-close-btn"></button>
+    <div class="navigation-container">
+      <div class="nav-logo"></div>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#about">О курсе</a></li>
+        <!-- <li><a href="#changes">Какие изменения тебя ждут?</a></li> -->
+        <li><a href="#who">Кто ведёт курс?</a></li>
+        <!-- <li><a href="#why">Зачем тебе это?</a></li> -->
+        <li><a href="#program">Программа</a></li>
+        <!-- <li><a href="#feedback">Отзывы</a></li> -->
+        <li><a href="#cost">Стоимость</a></li>
+        <!-- <li><a href="#special">Особые условия</a></li> -->
+        <li>
+          <button class="cta-btn in-menu">
+            Получить доступ
+          </button>
+        </li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Masthead -->
+  <section id="modal-form" class="modal-form">
+    <button class="nav-close-btn"></button>
+    <div class="modal-form-container">
+      <div class="nav-logo"></div>
+      <form action="" class="submit-form">
+        <label for="f-name" class="label">Имя</label>
+        <input type="text" id="f-name" class="input">
+
+        <label for="f-phone" class="label">Телефон</label>
+        <input type="phone" id="f-phone" class="input">
+
+        <label for="f-email" class="label">Email</label>
+        <input type="email" id="f-email" class="input">
+
+        <button class="submit-btn in-menu">
+          Отправить
+        </button>
+
+        <div class="modal-form-divider">или</div>
+
+        <a href="https://t.me/denhimself97" class="tg-btn" target="_blank">
+
+          Пиши в Telegram
+        </a>
+      </form>
+    </div>
+  </section>
+
+  <!-- Header -->
   <header class="header">
-    <button class="menu-btn"></button>
     <div class="logo"></div>
     <div class="slogan">Создай свою харизму за&nbsp;2&nbsp;месяца</div>
     <div class="header-action">
       <div class="video">
-        video
+        <iframe class="video-frame" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="cta-block">
         <ul class="cta-list">
           <li>
-            - Хочешь стать <b>увереннее в себе</b>
+            - Хочешь <b>убрать внутренние блоки</b>
           </li>
           <li>
-            - Испытываешь сложности при <b>общении с людьми</b>
+            - Испытываешь сложности при <b>рассказывании историй</b>
           </li>
           <li>
-            - Не знаешь как <b>добиться уважения</b>
+            - Не знаешь как заряжать людей <b>своей личностью</b>
           </li>
           <li>
-            - Не можешь <b>донести свои мысли и идеи</b>
+            - Желаешь <b>быть лидером в компании</b>
           </li>
           <li>
             - Не знаешь как <b>понравиться людям</b>
@@ -68,96 +116,94 @@
     </div>
   </header>
 
-  <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
-            </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-          </div>
+  <section id="about" class="section-second">
+    <div class="about">
+      <div class="about-pic"></div>
+      <div class="about-text">
+        <h3 class="about-header">
+          О курсе
+        </h3>
+        Только полезная информация и практика, в которой ты будешь расти с каждой коммуникацией.
+
+        Еще нигде не встречал, чтобы обучали где-то тому, от тех историй, которые ты рассказываешь и люди плакали.
+
+        Покажу тебе как выстраивать коммуникацию, чтобы люди слушали тебя с огоньком в глазах.<br>
+
+        Никаких волшебных таблеток, никаких обещаний.<br><br>
+
+        <b>Только результат</b><br><br>
+
+        Я возьму тебя за руку и пройду этот путь вместе с тобой.
+      </div>
+    </div>
+    <div class="tricks">
+      <div class="trick">
+        <i class="icon icon-leader"></i>
+        <h3 class="trick-header">
+          Навыки
+        </h3>
+        <div class="trick-text">
+          Множество навыков, которым можно научиться
         </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
-            </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-          </div>
+      </div>
+      <div class="trick">
+        <i class="icon icon-values"></i>
+        <h3 class="trick-header">
+          Убеждения
+        </h3>
+        <div class="trick-text">
+          Набор ценностей и убеждений, которые ты сможешь внедрить
         </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
-            </div>
-            <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-          </div>
+      </div>
+      <div class="trick">
+        <i class="icon icon-state"></i>
+        <h3 class="trick-header">
+          Состояние
+        </h3>
+        <div class="trick-text">
+          Внутреннее состояние, которое ты излучаешь на окружающих
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Image Showcases -->
-  <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
+  <section id="who" class="section-third">
+    <div class="who">
+      <div class="who-text">
+        <h3 class="who-header">
+          Кто ведёт курс?
+        </h3>
+        <b>Денис Лис.</b><br>
 
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Fully Responsive Design</h2>
-          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-        </div>
+        Если ты знаешь меня лично - ты знаешь, что я работаю до результата.
+
+        Занимаюсь психологией и развитием порядка 5 лет.<br>
+
+        Провожу индивидуальные занятия для разных людей по взаимоотношениям между мужчиной и женщиной в течении 2 лет.
+
+        Выпускал курсы по самодисциплине и взаимоотношению между мужчиной и женщиной.
       </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Updated For Bootstrap 4</h2>
-          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Customize</h2>
-          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-        </div>
-      </div>
+      <div class="who-pic"></div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials text-center bg-light">
-    <div class="container">
-      <h2 class="mb-5">What people are saying...</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-            <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-            <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-          </div>
-        </div>
+  <section id="program" class="section-fourth">
+    <div class="program">
+      <div class="program-text">
+        <h3 class="program-header">
+          Программа
+        </h3>
+        <b>Денис Лис.</b><br>
+
+        Если ты знаешь меня лично - ты знаешь, что я работаю до результата.
+
+        Занимаюсь психологией и развитием порядка 5 лет.<br>
+
+        Провожу индивидуальные занятия для разных людей по взаимоотношениям между мужчиной и женщиной в течении 2 лет.
+
+        Выпускал курсы по самодисциплине и взаимоотношению между мужчиной и женщиной.
       </div>
+      <div class="program-pic"></div>
     </div>
   </section>
 
@@ -232,10 +278,55 @@
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const disableBodyScroll = () => {
+      document.scrollingElement.style.top = `-${window.scrollY}px`;
+      document.scrollingElement.style.position = 'fixed';
+    };
 
+    const enableBodyScroll = (save) => {
+      const old = -parseInt(document.scrollingElement.style.top);
+      document.scrollingElement.style.position = '';
+      document.scrollingElement.style.top = '';
+      if (save) document.scrollingElement.scrollTop = old;
+    };
+
+    const navOpenBtn = document.getElementById('nav-open-btn');
+    const closeBtns = [...document.getElementsByClassName('nav-close-btn')];
+    const nav = document.getElementById('nav');
+    const navMenu = document.getElementById('nav-menu');
+    const modalForm = document.getElementById('modal-form');
+    const ctaBtns = [...document.getElementsByClassName('cta-btn')];
+
+    navOpenBtn.onclick = () => {
+      nav.classList.add('open');
+      disableBodyScroll();
+    };
+
+    navMenu.onclick = () => {
+      nav.classList.remove('open');
+      enableBodyScroll();
+    };
+
+    const modalFormOpen = () => {
+      modalForm.classList.add('open');
+      setTimeout(disableBodyScroll, 0);
+    };
+
+    const modalClose = () => {
+      nav.classList.remove('open');
+      modalForm.classList.remove('open');
+      enableBodyScroll(true);
+    };
+
+    closeBtns.forEach(btn => {
+      btn.onclick = modalClose;
+    });
+
+    ctaBtns.forEach(btn => {
+      btn.onclick = modalFormOpen;
+    });
+  </script>
 </body>
 
 </html>

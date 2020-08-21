@@ -1,14 +1,168 @@
-.navigation {
+.navigation, .modal-form {
   position: fixed;
   top: 0;
-  left: -10000px;
+  left: -100vw;
   width: 100%;
   height: 100vh;
   background-color: $gray-1;
   z-index: 1000;
 
-  &-open {
-    left: 0;
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $max-light;
+    overflow: auto;
+
+    @media screen and (max-width: $s) {
+      justify-content: start;
+    }
+  }
+
+  &-divider {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: $gray-3;
+    margin: 1.5rem 0;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      border-top: 1px solid $gray-3;
+      width: 40%;
+    }
+  }
+
+  &.open {
+    transform: translate(100vw, 0);
+  }
+
+  @media screen and (max-width: $s) {
+    transition: transform .2s ease-in;
+  }
+}
+
+.submit-form {
+  width: 15rem;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.input {
+  border-style: none;
+  border: 1px solid $gray-2;
+  background-color: $gray-1;
+  outline: none;
+  color: $max-light;
+  padding: .5rem .8rem;
+  display: block;
+  width: 100%;
+
+  &:focus, &:hover {
+    border-color: $gray-3;
+  }
+
+  &:invalid {
+    border-color: $action;
+  }
+}
+
+.tg-btn {
+  background-color: $tg-color;
+  color: $max-light !important;
+  text-decoration: none !important;
+  width: 100%;
+  display: flex;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .8rem;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url('../img/tg.svg');
+    display: inline-block;
+    margin-right: 0.4rem;
+  }
+}
+
+.nav-close-btn {
+  position: absolute;
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url('../img/close.svg') no-repeat center center;
+  background-size: 60% 60%;
+  border: none;
+  top: 2.5rem;
+  left: 2.5rem;
+  padding: 0.5rem;
+
+  @media screen and (max-width: $s) {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+.nav-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 12rem;
+  height: 8rem;
+  background: url('../img/logo.svg') no-repeat center center;
+  @include background-cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-menu {
+  flex: 0 0 auto;
+  width: 15rem;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  font-weight: 500;
+
+  & > li {
+    height: 2rem;
+    margin-bottom: .5rem;
+  }
+
+  & a {
+    color: $max-light !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -61,7 +215,7 @@
   left: 2.5rem;
   padding: 0.5rem;
 
-  @media screen and (max-width: $s) {
+  @media screen and (max-width: $m) {
     width: 2.5rem;
     height: 2.5rem;
     top: 1rem;
@@ -117,9 +271,17 @@
 }
 
 .video {
+  display: flex;
   flex-basis: 50%;
   min-height: 200px;
   background-color: $min-light;
+
+  & .video-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+  }
 }
 
 .cta-block {
@@ -151,16 +313,16 @@
 }
 
 .cta-date {
+  width: 100%;
   background-color: $min-light;
-  flex-basis: 50%;
   height: 2.5rem;
   line-height: 2.5rem;
   text-align: center;
 }
 
-.cta-btn {
+.cta-btn, .submit-btn {
+  width: 100%;
   display: block;
-  flex-basis: 50%;
   height: 2.5rem;
   line-height: 2.5rem;
   -webkit-appearance: none;
@@ -173,4 +335,8 @@
   font-size: .8rem;
   background-color: $action;
   color: $max-light;
+
+  &.in-menu {
+    margin-top: 1.5rem;
+  }
 }

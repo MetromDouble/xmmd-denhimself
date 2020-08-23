@@ -1,75 +1,144 @@
 .section-fourth {
-  color: $max-light;
+  color: $gray-1;
   position: relative;
   width: 100%;
   box-sizing: border-box;
   padding: 4rem 1rem;
-  background-color: $min-light;
+  background-color: $gray-3;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
 
+  @media screen and (max-width: $xl) {
+    padding: 3rem 1rem;
+  }
+
   @media screen and (max-width: $m) {
-    padding: 1rem .8rem;
+    padding: 2rem .8rem;
   }
 
   .program {
     width: 960px;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
 
-    &-pic {
-      background: $min-light;
-      width: 18rem;
-      min-height: 27rem;
-      max-width: 90%;
-      flex-shrink: 0;
-      margin: auto;
-      @include background-cover;
-      background: url('../img/den2.jpg') no-repeat top center;
-      background-size: contain;
+    @media screen and (max-width: $xl) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: $m) {
+      width: 96%;
     }
 
     &-header {
       font-size: 2.4rem;
       @include body-font;
       font-weight: 300;
-      margin-top: .5rem;
       margin-bottom: 1.5rem;
+      text-align: center;
 
-      @media screen and (max-width: $xl) {
+      @media screen and (max-width: $m) {
         font-size: 2rem;
       }
     }
 
-    &-text {
-      width: 100%;
-      padding: 1.5rem;
-      padding-right: 3rem;
-      font-size: 1.12rem;
+    &-items {
+      position: relative;
 
-      @media screen and (max-width: $xl) {
-        font-size: 1rem;
+      &::before {
+        display: block;
+        content: '';
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: calc(50% - 1px);
+        top: 0;
+        background-color: $gray-1;
+
+        @media screen and (max-width: $m) {
+          left: 15px;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+      font-weight: 500;
+      width: calc(50% - 1px);
+
+      &-emblem {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 6px;
+        border: 1px solid $gray-1;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $gray-1;
+        position: absolute;
+        top: 0;
+        background: $gray-3 no-repeat center center;
+
+        &--gift {
+          background-image: url('../img/gift.svg');
+          background-size: 60% 60%;
+        }
+      }
+      &-header {
+        font-size: 1.5rem;
+        @include body-font;
+        font-weight: 500;
         margin-bottom: 1rem;
+        color: $gray-2;
+        line-height: 2rem;
+      }
+      &-text {
+        font-size: .9rem;
       }
 
-      @media screen and (max-width: $m) {
-        padding: .8rem;
+      &--left {
+        padding-right: 2rem;
+        text-align: right;
+        margin-right: calc(50% + 1px);
+        width: calc(50% - 1px);
+
+        @media screen and (max-width: $m) {
+          margin-right: 0;
+          width: 100%;
+          text-align: left;
+          padding-right: 0;
+          padding-left: 3rem;
+        }
+
+        .program-item-emblem {
+          right: -17px;
+
+          @media screen and (max-width: $m) {
+            right: auto;
+            left: 0;
+          }
+        }
       }
-    }
+      &--right {
+        padding-left: 3rem;
+        text-align: left;
+        margin-left: calc(50% + 1px);
 
-    @media screen and (max-width: $xl) {
-      width: 720px;
-      margin-bottom: 2rem;
-    }
+        @media screen and (max-width: $m) {
+          margin-left: 0;
+          width: 100%;
+        }
 
-    @media screen and (max-width: $m) {
-      width: 100%;
-      flex-direction: column;
-      text-align: center;
+        .program-item-emblem {
+          left: -17px;
+
+          @media screen and (max-width: $m) {
+            left: 0;
+          }
+        }
+      }
     }
   }
 }

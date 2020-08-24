@@ -66,6 +66,10 @@
       font-weight: 500;
       width: calc(50% - 1px);
 
+      @media screen and (max-width: $m) {
+        margin-top: 2rem;
+      }
+
       &-emblem {
         display: flex;
         width: 2rem;

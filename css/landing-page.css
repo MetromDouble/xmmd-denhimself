@@ -773,6 +773,12 @@ h6 {
   width: calc(50% - 1px);
 }
 
+@media screen and (max-width: 800px) {
+  .section-fourth .program-item {
+    margin-top: 2rem;
+  }
+}
+
 .section-fourth .program-item-emblem {
   display: flex;
   width: 2rem;
@@ -880,55 +886,6 @@ h6 {
 
 .section-fifth .cost {
   width: 960px;
-  display: flex;
-  justify-content: stretch;
-  align-items: stretch;
-}
-
-.section-fifth .cost-pic {
-  background: #000;
-  width: 18rem;
-  min-height: 27rem;
-  max-width: 90%;
-  flex-shrink: 0;
-  margin: auto;
-  background-size: cover;
-  background: url("../img/den2.jpg") no-repeat top center;
-  background-size: contain;
-}
-
-.section-fifth .cost-header {
-  font-size: 2.4rem;
-  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin-top: .5rem;
-  margin-bottom: 1.5rem;
-}
-
-@media screen and (max-width: 1200px) {
-  .section-fifth .cost-header {
-    font-size: 2rem;
-  }
-}
-
-.section-fifth .cost-text {
-  width: 100%;
-  padding: 1.5rem;
-  padding-right: 3rem;
-  font-size: 1.12rem;
-}
-
-@media screen and (max-width: 1200px) {
-  .section-fifth .cost-text {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .section-fifth .cost-text {
-    padding: .8rem;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -944,6 +901,84 @@ h6 {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.section-fifth .cost-header {
+  font-size: 2.4rem;
+  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .section-fifth .cost-header {
+    font-size: 2rem;
+  }
+}
+
+.section-fifth .cost .costs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-fifth .cost .costs-item {
+  height: 18rem;
+  width: calc(33.33333% - 3rem);
+  text-align: center;
+  border: 1px solid #fff;
+  padding: .8rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-fifth .cost .costs-item--best {
+  height: 21rem;
+  width: calc(33.33333% - .5rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.section-fifth .cost .costs-item--best:before {
+  width: 10rem;
+  height: 1rem;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: -2rem;
+  background-color: #ff4040;
+  transform: rotate(45deg);
+}
+
+.section-fifth .cost .costs-item-header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.section-fifth .cost .costs-item-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ff4040;
+  padding-bottom: .8rem;
+}
+
+.section-fifth .cost .costs-item-text {
+  font-size: .9rem;
+}
+
+.section-fifth .cost .costs-item-text p {
+  margin-bottom: .5rem;
+}
+
+.section-fifth .cost .cta-btn {
+  width: calc(33.33333% - .5rem);
+  margin: auto;
+  margin-top: 4rem;
 }
 
 .showcase .showcase-text {

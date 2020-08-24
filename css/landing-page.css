@@ -1068,8 +1068,57 @@ h6 {
 }
 
 .footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  background-color: #7b7b7b;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #000;
   color: #fff;
+}
+
+.footer-container {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-container {
+    width: 96%;
+  }
+}
+
+.footer-text {
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.footer-icons {
+  display: flex;
+}
+
+.footer-icon {
+  background: no-repeat center center;
+  background-size: 60% 60%;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+.footer-icon--ig {
+  background-image: url("../img/instagram.svg");
+}
+
+.footer-icon--yt {
+  background-image: url("../img/youtube.svg");
+}
+
+.footer-icon--tg {
+  background-image: url("../img/tg.svg");
 }

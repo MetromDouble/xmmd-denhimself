@@ -106,7 +106,7 @@
         </ul>
         <div class="cta-go">
           <div class="cta-date">
-            Начало: <b>12 сентября 2020</b>
+            Начало: <b>14 сентября 2020</b>
           </div>
           <button class="cta-btn">
             Получить доступ
@@ -412,18 +412,6 @@
   </footer>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxfHRMlPQ5SowCoYenZ7NQjsfz6XHM0R8l6cz4T40sbUpvyW9c/exec';
-    const form = document.forms['submit-to-google-sheet'];
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message));
-    })
-  </script>
-
-  <script>
     const disableBodyScroll = () => {
       document.scrollingElement.style.top = `-${window.scrollY}px`;
       document.scrollingElement.style.position = 'fixed';
@@ -471,6 +459,18 @@
     ctaBtns.forEach(btn => {
       btn.onclick = modalFormOpen;
     });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxfHRMlPQ5SowCoYenZ7NQjsfz6XHM0R8l6cz4T40sbUpvyW9c/exec';
+    const form = document.forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          modalClose();
+        })
+        .catch(error => console.error('Error!', error.message));
+    })
   </script>
 </body>
 

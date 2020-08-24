@@ -54,7 +54,7 @@
     <button class="nav-close-btn"></button>
     <div class="modal-form-container">
       <div class="nav-logo"></div>
-      <form action="" class="submit-form">
+      <form name="submit-to-google-sheet" class="submit-form">
         <label for="f-name" class="label">Имя</label>
         <input type="text" id="f-name" class="input">
 
@@ -410,6 +410,18 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxfHRMlPQ5SowCoYenZ7NQjsfz6XHM0R8l6cz4T40sbUpvyW9c/exec';
+    const form = document.forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message));
+    })
+  </script>
 
   <script>
     const disableBodyScroll = () => {

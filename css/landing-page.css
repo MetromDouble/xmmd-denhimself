@@ -891,7 +891,6 @@ h6 {
 @media screen and (max-width: 1200px) {
   .section-fifth .cost {
     width: 720px;
-    margin-bottom: 2rem;
   }
 }
 
@@ -924,6 +923,12 @@ h6 {
   align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+  .section-fifth .cost .costs {
+    flex-direction: column;
+  }
+}
+
 .section-fifth .cost .costs-item {
   height: 18rem;
   width: calc(33.33333% - 3rem);
@@ -934,6 +939,21 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-fifth .cost .costs-item {
+    height: 18rem;
+    width: calc(33.33333% - 1rem);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section-fifth .cost .costs-item {
+    height: auto;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
 }
 
 .section-fifth .cost .costs-item--best {
@@ -953,6 +973,26 @@ h6 {
   right: -2rem;
   background-color: #ff4040;
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 800px) {
+  .section-fifth .cost .costs-item--best:before {
+    top: 0;
+    right: -3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-fifth .cost .costs-item--best {
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section-fifth .cost .costs-item--best {
+    height: auto;
+    width: 90%;
+  }
 }
 
 .section-fifth .cost .costs-item-header {
@@ -979,6 +1019,16 @@ h6 {
   width: calc(33.33333% - .5rem);
   margin: auto;
   margin-top: 4rem;
+  font-size: .9rem;
+}
+
+@media screen and (max-width: 800px) {
+  .section-fifth .cost .cta-btn {
+    width: 90%;
+    max-width: 15rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .showcase .showcase-text {

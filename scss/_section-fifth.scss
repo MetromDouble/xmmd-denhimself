@@ -20,7 +20,6 @@
 
     @media screen and (max-width: $xl) {
       width: 720px;
-      margin-bottom: 2rem;
     }
 
     @media screen and (max-width: $m) {
@@ -46,6 +45,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (max-width: $m) {
+        flex-direction: column;
+      }
     }
 
     .costs-item {
@@ -58,6 +61,17 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @media screen and (max-width: $xl) {
+        height: 18rem;
+        width: calc(33.33333% - 1rem);
+      }
+
+      @media screen and (max-width: $m) {
+        height: auto;
+        width: 90%;
+        margin-bottom: 1rem;
+      }
 
       &--best {
         height: 21rem;
@@ -75,6 +89,20 @@
           right: -2rem;
           background-color: $action;
           transform: rotate(45deg);
+
+          @media screen and (max-width: $m) {
+            top: 0;
+            right: -3rem;
+          }
+        }
+
+        @media screen and (max-width: $xl) {
+          height: 20rem;
+        }
+
+        @media screen and (max-width: $m) {
+          height: auto;
+          width: 90%;
         }
       }
 
@@ -103,6 +131,14 @@
       width: calc(33.33333% - .5rem);
       margin: auto;
       margin-top: 4rem;
+      font-size: .9rem;
+
+      @media screen and (max-width: $m) {
+        width: 90%;
+        max-width: 15rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }

@@ -274,7 +274,8 @@
   display: flex;
   flex-basis: 50%;
   min-height: 200px;
-  background-color: $min-light;
+  background: $min-light no-repeat center center;
+  background-image: url('../img/den-cover.jpg');
 
   & .video-frame {
     position: relative;

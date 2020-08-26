@@ -320,7 +320,9 @@ h6 {
   display: flex;
   flex-basis: 50%;
   min-height: 200px;
-  background-color: #000;
+  background: #000 no-repeat center center;
+  background-image: url("../img/den-cover.jpg");
+  background-size: contain;
 }
 
 .video .video-frame {
